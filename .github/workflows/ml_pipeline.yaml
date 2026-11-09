@@ -60,7 +60,7 @@ jobs:
       with:
         python-version: "3.11"
     - name: 3.Install dependencies
-      run: pip install -r requirements.txt; fi
+      run: pip install -r requirements.txt;
     - name: 4.train
       run: python src/train.py
     # - name: Test with pytest

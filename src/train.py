@@ -6,6 +6,7 @@ from sklearn.compose import ColumnTransformer
 from xgboost import XGBClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score,f1_score,recall_score,precision_score
+import joblib
 
 def train():
     
@@ -28,6 +29,7 @@ def train():
     recall = recall_score(y_test,pred)
     prec = precision_score(y_test,pred)
     print(acc,f1,recall,prec)
+    joblib.dump(model,'model.pkl')
 
 if __name__ == "__main__":
     train()
